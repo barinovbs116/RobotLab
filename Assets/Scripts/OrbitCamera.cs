@@ -17,7 +17,7 @@ public class OrbitCamera : MonoBehaviour
 
     void Start()
     {
-        // Сохраняем дефолтное положение при запуске
+        
         defaultX = currentX;
         defaultY = currentY;
         defaultDistance = distance;
@@ -25,7 +25,7 @@ public class OrbitCamera : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0)) // вращение
+        if (Input.GetMouseButton(0)) // ГўГ°Г Г№ГҐГ­ГЁГҐ
         {
             float mouseX = Input.GetAxisRaw("Mouse X");
             float mouseY = Input.GetAxisRaw("Mouse Y");
