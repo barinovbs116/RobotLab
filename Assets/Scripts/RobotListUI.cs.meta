@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 48b0b226f33f63e488173faeab40ce2b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - robotCardPrefab: {fileID: 378104980283903104, guid: 6fb5ed118363ac64093acc3f329dd0fb, type: 3}
+  - contentPanel: {fileID: 3044999749632148098, guid: c3c07512eb71a0c4e9aa99088136281a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
