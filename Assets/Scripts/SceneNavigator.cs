@@ -11,7 +11,7 @@ public class SceneNavigator : MonoBehaviour
         
     }
 
-    // Метод для кнопки "Назад"
+    
     public void LoadRobotListScene()
     {
         SceneManager.LoadScene("SampleScene"); 
