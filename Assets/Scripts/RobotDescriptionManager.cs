@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class RobotDescriptionManager : MonoBehaviour
 {
     public GameObject descriptionPanel;
-    public TMP_Text titleText;       // Название робота
-    public TMP_Text descriptionText; // Описание робота
+    public TMP_Text titleText;       
+    public TMP_Text descriptionText; 
 
     public void ShowDescription(string robotName, string description)
     {
