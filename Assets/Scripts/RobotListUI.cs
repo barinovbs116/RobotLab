@@ -19,7 +19,7 @@ public class RobotListUI : MonoBehaviour
     public GameObject robotCardPrefab;
     public Transform contentPanel;
 
-    public RobotDescriptionManager descriptionManager; // 👈 Добавили ссылку
+    public RobotDescriptionManager descriptionManager; 
 
     private void Start()
     {
@@ -34,18 +34,18 @@ public class RobotListUI : MonoBehaviour
             TextMeshProUGUI nameText = card.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             nameText.text = robot.name;
 
-            // 📌 Кнопка "Подробнее"
+           
             Button moreButton = card.transform.Find("Button").GetComponent<Button>();
             TextMeshProUGUI buttonText = card.transform.Find("Button/Text (TMP)").GetComponent<TextMeshProUGUI>();
             buttonText.text = "Подробнее";
 
-            // 👇 Добавим вызов менеджера описания
+            
             moreButton.onClick.AddListener(() =>
             {
                 descriptionManager.ShowDescription(robot.name, robot.description);
             });
 
-            // 📌 Кнопка "3D-визуализация"
+            
             Button view3DButton = card.transform.Find("BtnView3D").GetComponent<Button>();
             view3DButton.onClick.AddListener(() =>
             {
