@@ -6,11 +6,11 @@ public class AnimationController : MonoBehaviour
 
     void Start()
     {
-        // Предполагается, что у робота есть Animator в дочерних объектах
+        
         animator = GetComponentInChildren<Animator>();
         if (animator == null)
         {
-            Debug.LogError("Animator не найден в дочерних объектах.");
+            Debug.LogError("Animator Г­ГҐ Г­Г Г©Г¤ГҐГ­ Гў Г¤Г®Г·ГҐГ°Г­ГЁГµ Г®ГЎГєГҐГЄГІГ Гµ.");
         }
     }
 
@@ -19,7 +19,7 @@ public class AnimationController : MonoBehaviour
         if (animator != null)
         {
             animator.enabled = true;
-            animator.Play(0); // запускаем первый клип; можно заменить на имя клипа, если требуется
+            animator.Play(0); 
         }
     }
 
