@@ -9,22 +9,22 @@ public class UIController : MonoBehaviour
 
     private void Start()
     {
-        // Проверяем, нужно ли сразу открыть RobotsPanel (например, после возврата из 3D сцены)
+        
         int goToRobots = PlayerPrefs.GetInt("GoToRobotsPanel", 0);
 
         if (goToRobots == 1)
         {
-            // Открываем панель роботов, скрываем главное меню
+            
             mainMenuPanel.SetActive(false);
             robotsPanel.SetActive(true);
 
-            // Сбрасываем флаг
+            
             PlayerPrefs.SetInt("GoToRobotsPanel", 0);
             PlayerPrefs.Save();
         }
         else
         {
-            // Обычное поведение при старте
+           
             mainMenuPanel.SetActive(true);
             robotsPanel.SetActive(false);
         }
@@ -44,11 +44,11 @@ public class UIController : MonoBehaviour
 
     public void ExitApplication()
     {
-        Debug.Log("Выход из приложения...");
+        Debug.Log("Г‚Г»ГµГ®Г¤ ГЁГ§ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї...");
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // для редактора
+        UnityEditor.EditorApplication.isPlaying = false; // Г¤Г«Гї Г°ГҐГ¤Г ГЄГІГ®Г°Г 
 #else
-        Application.Quit(); // для билда
+        Application.Quit(); // Г¤Г«Гї ГЎГЁГ«Г¤Г 
 #endif
     }
 }
