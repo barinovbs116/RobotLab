@@ -6,7 +6,7 @@ public class ModelLoader : MonoBehaviour
     public Transform modelHolder;
     public Text robotNameText;
 
-    public float targetSize = 2f; // Целевой размер модели на экране
+    public float targetSize = 2f; 
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class ModelLoader : MonoBehaviour
 
         if (string.IsNullOrEmpty(selectedModel))
         {
-            Debug.LogError("Не выбрана модель для отображения.");
+            Debug.LogError("ГЌГҐ ГўГ»ГЎГ°Г Г­Г  Г¬Г®Г¤ГҐГ«Гј Г¤Г«Гї Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї.");
             return;
         }
 
@@ -22,7 +22,7 @@ public class ModelLoader : MonoBehaviour
 
         if (modelPrefab == null)
         {
-            Debug.LogError("Не удалось загрузить префаб модели: " + selectedModel);
+            Debug.LogError("ГЌГҐ ГіГ¤Г Г«Г®Г±Гј Г§Г ГЈГ°ГіГ§ГЁГІГј ГЇГ°ГҐГґГ ГЎ Г¬Г®Г¤ГҐГ«ГЁ: " + selectedModel);
             return;
         }
 
@@ -34,7 +34,7 @@ public class ModelLoader : MonoBehaviour
 
         if (robotNameText != null)
         {
-            robotNameText.text = "Робот: " + selectedModel;
+            robotNameText.text = "ГђГ®ГЎГ®ГІ: " + selectedModel;
         }
 
         FocusCameraOnModel(modelInstance);
@@ -52,11 +52,11 @@ public class ModelLoader : MonoBehaviour
 
         float largestSize = Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z);
 
-        // Получаем имя модели из PlayerPrefs
+        
         string selectedModel = PlayerPrefs.GetString("SelectedRobotModel", "");
         float manualScale = 1f;
 
-        // Можно подбирать на глаз, чтобы уравнять размеры
+       
         if (selectedModel == "articulated_robot")
             manualScale = 50f;
         else if (selectedModel == "cartesian_robot")
